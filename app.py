@@ -43,7 +43,7 @@ def db_instance_is_available(db_id):
     status = resp['DBInstances'][0]['DBInstanceStatus']
     return status == 'available'
 
-def lambda_handler(event, context):
+def handler(event, context):
     print("Event received:", event)
     source_db_instance_identifier = os.environ['SOURCE_DB']
     snapshot_identifier = os.environ.get('SNAPSHOT_ID', None)
