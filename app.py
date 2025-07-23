@@ -153,7 +153,6 @@ def handler(event, context):
                 ApplyImmediately=True
             )
             # Robustly wait for the new instance to appear and become available
-            import time
             max_wait = 300  # seconds
             poll_interval = 10
             waited = 0
